@@ -1,0 +1,8 @@
+File from: [app/images/src/sevic.jpg]
+
+File to: [app/images/dest/sevic.jpg]
+
+Compression algorithm: [mozjpeg]
+
+Description: Error: Command failed: D:\open\OpenServer\domains\project_bar\node_modules\mozjpeg\vendor\cjpeg.exe -quality 75 -outfile app/images/dest/sevic.jpg app/images/src/sevic.jpg
+Empty input file

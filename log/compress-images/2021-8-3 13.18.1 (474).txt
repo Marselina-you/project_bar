@@ -1,0 +1,7 @@
+File from: [app/images/src/img4.png]
+
+File to: [app/images/dest/img4.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: D:\open\OpenServer\domains\project_bar\node_modules\pngquant-bin\vendor\pngquant.exe --quality=75-100 -o app/images/dest/img4.png app/images/src/img4.png

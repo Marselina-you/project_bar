@@ -1,0 +1,14 @@
+File from: [app/images/src/tapas.png]
+
+File to: [app/images/dest/tapas.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: D:\open\OpenServer\domains\project_bar\node_modules\pngquant-bin\vendor\pngquant.exe --quality=75-100 -o app/images/dest/tapas.png app/images/src/tapas.png
+File from: [app/images/src/miny-fon.png]
+
+File to: [app/images/dest/miny-fon.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: D:\open\OpenServer\domains\project_bar\node_modules\pngquant-bin\vendor\pngquant.exe --quality=75-100 -o app/images/dest/miny-fon.png app/images/src/miny-fon.png

@@ -53,33 +53,52 @@ $color3:  rgba(56, 60, 56, 0.5)
 .container-fluid
 	width: 100%
 	@media screen and (max-width: 992px)
-	padding: 0
+		padding: 0
 .content-block1
 	background: url(../images/dest/contentFon1.jpg) no-repeat
 	height: 817px
+	@media screen and (max-width: 992px)
+		height: 300px
 .content-block1__slogan
 	background-color: $color2
 	letter-spacing: 10px
 .wrap-content-block1
 	padding-top: 340px
 	@media screen and (max-width: 992px)
-	padding-top: 100px
+		padding-top: 100px
 .content-block2
 	padding: 50px 0 50px 0
+	@media screen and (max-width: 992px)
+		flex-direction: column
+.content-block-music
+	flex-direction: row-reverse
+
 .content-block2__title
 	padding: 10px
 .content-block2__content
 	line-height: 30px
+.content-block2__foto img
+	@media screen and (max-width: 992px)
+		display: none
 .content-block3
 	background: url(../images/dest/contentFon3.jpg)
 	height: 817px
+	@media screen and (max-width: 992px)
+		height: 300px
+		width: 100%
 .wrap-content-block3
 	padding-top: 260px
+	@media screen and (max-width: 992px)
+		padding-top: 0
 .content-block3__text
 	background-color: $color3
 	padding: 20px
 .content-block3__quote
 	line-height: 30px
+
+.content-block3__quote1
+	@media screen and (max-width: 992px)
+		font-size: 1.8em	
 .content-block3__author
 	font-size: 29px
 .content-block4

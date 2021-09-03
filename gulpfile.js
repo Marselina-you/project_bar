@@ -49,6 +49,7 @@ function styles() {
 	.pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
+
 async function images() {
 	imagecomp(
 		"app/images/src/**/*", // Берём все изображения из папки источника
@@ -74,6 +75,7 @@ function buildcopy() {
 		'app/js/**/*.min.js',
 		'app/images/dest/**/*',
 		'app/**/*.html',
+		'app/**/*.php',
 		], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
 	.pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
 }

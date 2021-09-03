@@ -1,0 +1,7 @@
+File from: [app/images/src/sevic.png]
+
+File to: [app/images/dest/sevic.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: D:\open\OpenServer\domains\project_bar\node_modules\pngquant-bin\vendor\pngquant.exe --quality=75-100 -o app/images/dest/sevic.png app/images/src/sevic.png
