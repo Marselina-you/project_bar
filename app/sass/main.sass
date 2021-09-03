@@ -2,6 +2,19 @@ body
 	background: #243237
 	font: "Arial" "Tahoma" "Gabriola" "Swiss721BT" "Lucida Console"
 	width: 100%
+.container-fluid
+	width: 100%
+.mybtn
+	background-color: #696969
+	color: white
+	border-radius: 35px
+	padding: 7px 30px 7px 30px
+.redhover a 
+	&:hover
+		color: #e05e58 
+		cursor: pointer 	
+.none
+	display: none
 $color2: rgba(0, 170, 238, 0.3)
 $color3:  rgba(56, 60, 56, 0.5)
 .redcolor
@@ -54,6 +67,7 @@ $color3:  rgba(56, 60, 56, 0.5)
 	width: 100%
 	@media screen and (max-width: 992px)
 		padding: 0
+	//content
 .content-block1
 	background: url(../images/dest/contentFon1.jpg) no-repeat
 	height: 817px
@@ -72,6 +86,15 @@ $color3:  rgba(56, 60, 56, 0.5)
 		flex-direction: column
 .content-block-music
 	flex-direction: row-reverse
+	@media screen and (max-width: 992px)
+		flex-direction: column
+		padding: 0
+		background: url(../images/dest/music.png) no-repeat, rgba(255, 255, 255, .5)
+		background-blend-mode: color
+.content-block2__content__music
+	@media screen and (max-width: 992px)
+		color: rgb(37, 40, 62)
+		padding: 50px 0
 
 .content-block2__title
 	padding: 10px
@@ -101,7 +124,36 @@ $color3:  rgba(56, 60, 56, 0.5)
 		font-size: 1.8em	
 .content-block3__author
 	font-size: 29px
+	@media screen and (max-width: 576px)
+		font-size: 15px
 .content-block4
 	background: url(../images/dest/contentFon4.jpg) no-repeat
 	height: 817px
+	@media screen and (max-width: 992px)
+		height: 300px
+	//footer
+.footer-block
+	padding: 0
+	background-color: #f5fafb
+.footer-block1
+	padding: 40px
+.footer-block1__content p 
+	line-height: 60px
+	@media screen and (max-width: 768px)
+		line-height: 20px 
+.footer-block1__button
+	@media screen and (max-width: 768px)
+		padding: 15px
+.wrap-footer-block2
+	background: #332f2c
+.footer-part2
+	padding: 30px
+.footer-title
+	@media screen and (max-width: 768px)
+		font-size: 20px
+.footer-part2__text1
+	@media screen and (max-width: 576px)
+		font-size: 15px
+.footer-block2__content1
+	letter-spacing: .1em
 
