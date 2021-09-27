@@ -98,4 +98,5 @@
 
 <script src="js/app.min.js"></script>
 </body>
+<?php require_once('footer.html');?>
 </html>
