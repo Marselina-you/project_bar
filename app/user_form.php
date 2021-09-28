@@ -5,7 +5,7 @@ if(isset($_COOKIE['date'])){
 	$select_t = sprintf($people_c);
 	$pr = 'rere';
     $head = '<div class="col-lg-12 cookie-form d-flex flex-column align-items-center">
-    	<div class="block-cookie colorGrey"><b>Вы заказали столик на  '.$date_c. '!</br>Time: '.$timeorder_c. '</br>Вас будет '.$people_c. '</b></div><div class="block-cookie1 col-lg-8 colorGrey d-flex flex-column align-items-center">Чтобы оформить заказ, вам нужно <a href="enter.php" class="header-box1__href">войти</a>
+    	<div class="block-cookie colorGrey"><b>Вы заказали столик на  '.$date_c. '!</br>Time: '.$timeorder_c. '</br>Вас будет '.$people_c. '</b></div><div class="block-cookie1 col-lg-8 colorGrey d-flex flex-column align-items-center">Чтобы оформить заказ, вам нужно <a href="user_enter.php" class="header-box1__href">войти</a>
     		<div class= "empty1"></div>
     		<div>или</div><a href="user_registration.php" class="header-box1__href">зарегистрироваться</a>
     		<div class= "empty2"></div>
