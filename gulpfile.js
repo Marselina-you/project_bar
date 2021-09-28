@@ -17,8 +17,11 @@ const autoprefixer = require('gulp-autoprefixer');
  
 // Подключаем модуль gulp-clean-css
 const cleancss = require('gulp-clean-css');
-// Подключаем compress-images для работы с изображениями
-const imagecomp = require('compress-images');
+// Подключаем gulp-imagemin для работы с изображениями
+const imagemin = require('gulp-imagemin');
+// Подключаем модуль gulp-newer
+const newer = require('gulp-newer');
+
  
 // Подключаем модуль del
 const del = require('del');
@@ -50,21 +53,11 @@ function styles() {
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
 
-async function images() {
-	imagecomp(
-		"app/images/src/**/*", // Берём все изображения из папки источника
-		"app/images/dest/", // Выгружаем оптимизированные изображения в папку назначения
-		{ compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
-		{ jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
-		{ png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
-		{ svg: { engine: "svgo", command: "--multipass" } },
-		{ gif: { engine: "gifsicle", command: ["--colors", "64", "--use-col=web"] } },
-		function (err, completed) { // Обновляем страницу по завершению
-			if (completed === true) {
-				browserSync.reload()
-			}
-		}
-	)
+function images() {
+	return src('app/images/src/**/*') // Берём все изображения из папки источника
+	.pipe(newer('app/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
+	.pipe(imagemin()) // Сжимаем и оптимизируем изображеня
+	.pipe(dest('app/images/dest/')) // Выгружаем оптимизированные изображения в папку назначения
 }
 function cleanimg() {
 	return del('app/images/dest/**/*', { force: true }) // Удаляем все содержимое папки "app/images/dest/"
@@ -93,6 +86,7 @@ function startwatch() {
 	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
 	watch('app/images/src/**/*', images);
 	watch('app/**/*.php').on('change', browserSync.reload);
+	watch('app/**/' + preprocessor + '/**/*', ).on('change', browserSync.reload);
  
 }
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.

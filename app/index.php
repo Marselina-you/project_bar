@@ -1,12 +1,29 @@
-<!DOCTYPE html>
+<?php 
+$date = $_POST['date'];
+$timeorder = $_POST['timeorder'];
+$people = $_POST['people'];
+if (isset($_POST['submit'])) {
+  setcookie('date', $date);
+  setcookie('timeorder', $timeorder);
+  setcookie('people', $people);
+   header('Location: ' .$_SERVER["HTTP_REFERER"]);
+}
+$select_c = '11 July';
+$select_b = '19.00pm';
+$select_t = '2 people';
+$date_c = $_COOKIE['date'];
+$timeorder_c = $_COOKIE['timeorder'];
+$people_c = $_COOKIE['people'];?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1">
-	<link rel="stylesheet" href="css/app.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/app.min.css">
 	<title>Bar</title>
 </head>
+<?php require_once('title.html');
+require_once('user_form.php');?>
 <body>
 	<div class="container-fluid wrap-content-block col-lg-12">
 		<div class="content-block1">
