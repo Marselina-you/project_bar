@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+    <body>
+        <div class="container-fluid formAdmin">
+            <form enctype="multipart/form-data" method="post" class="block-add__form col-lg-12  d-flex flex-column" action="admin_add_product.php">
+                <div class="block-add d-flex"> 
+                    <div class="block-main block-main-menu col-lg-4">
+                        <div class="size24px">Main course</div>
+                        <div class="block-main-menu__type d-flex">
+                            <label for="types" class="col-lg-4">Type of dish</label>
+                            <div class="col-lg-8"><select name="types" class="col-lg-12">
+                                <option>Appetizers</option>
+                                <option>Main dishes</option>
+                                <option>Desserts</option></select ></div></div>
+                        <div class="block-main-menu__name d-flex"><label for="name" class="col-lg-4">Name</label>
+                            <div class="col-lg-8"><input type="text" class="col-lg-12" name="name" /></div>
+                        </div>
+                        <div class="block-main-menu__value d-flex"><label for="value" class="col-lg-4">Value</label>    
+                            <div class="col-lg-8"><input class="col-lg-12" type="text" name="value"/></div>
+                        </div>
+                        <div class="block-main-menu__ingredients d-flex"><label for="description" class="col-lg-4 Ingredients">Ingredients</label>
+                            <div class="col-lg-8"><textarea class="col-lg-12"  type="text" name="ingredients"/></textarea></div>
+                        </div>
+                        <div class="weight d-flex"><label for="value" class="col-lg-4">Weight</label>    
+                            <div class="col-lg-8"><input class="col-lg-12" type="text" name="weight"/></div>
+                        </div>
+                        <div class=""><input type="hidden" name="MAX_FILE_SIZE" value="" /><div class="d-flex"><label for="new_picture" class="col-lg-4">Фото</label>
+                            <div class="col-lg-8"><input class="hidden" type="file" name="new_picture" class="col-lg-12" multiple/></div></div></div>
+                        </div>
+                
+                    <div class="block-main block-main-extras col-lg-4">
+                        <div class="extras size24px">Exstras</div>
+                        <div class="">
+                            <div class="d-flex"><label for name="nameExtras" class="col-lg-4">Name</label>
+                            <div class="col-lg-8"><input type="text" class="col-lg-12" name="nameExtras" /></div></div>
+                            <div class="d-flex"><label for="valueExtras" class="col-lg-4">Value Extras</label>    
+                            <div class="col-lg-8"><input class="col-lg-12" type="text" name="valueExtras"/></div></div>
+                        </div>
+                    </div>
+
+                    <div class="block-main block-main-beverages col-lg-4">
+                        <div class="size24px">Beverages</div>
+                        <div class="d-flex"><label for="nameBeverages" class="col-lg-4">Name</label>
+                        <div class="col-lg-8"><input type="text" class="col-lg-12" name="nameBeverages" /></div></div>
+                        <div class="d-flex"><label for="valueBeverages" class="col-lg-4">Value</label>    
+                        <div class="col-lg-8"><input class="col-lg-12" type="text" name="valueBeverages"/></div></div>
+                    </div> 
+                </div>
+                <div class="block-add-save d-flex col-lg-1 offset-lg-10">
+                    <div class="block-main__submit col-lg-12"><input type="submit" value="save" name="submit" class="btn btn-dark size20px col-lg-12"/></div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
