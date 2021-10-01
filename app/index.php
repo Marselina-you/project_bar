@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $date = $_POST['date'];
 $timeorder = $_POST['timeorder'];
 $people = $_POST['people'];
