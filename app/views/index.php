@@ -10,4 +10,4 @@ require_once('views/layouts/content-info2.php');
 require_once('views/layouts/content-info3.php');
 require_once('views/layouts/content-info4.php');
 require_once('views/layouts/content-block3.php');
-require_once('views/layouts/footer.php');?>
+require_once('views/layouts/footer.php');

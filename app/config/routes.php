@@ -1,7 +1,8 @@
 <?php 
 return array(
-    
-   'news' => 'news/index', // actionView в ProductController
+
+   'news/([0-9]+)' => 'news/view/$1',
+   'news' => 'news/index', 
    'products' => 'product/list',
 
 
