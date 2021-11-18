@@ -48,8 +48,23 @@
     
 </footer><!--/Footer-->
 </div>
+<script type="text/javascript">
+  
+    $(document).ready(function(){
+        $(".clickExtras").click(function(evt) {
+            evt.preventDefault();
+            var id = $(this).attr("data-id");
+            $.get("/catalog/extras/"+id, {}, function (data) {
+                $(".nown").html(data);
+            });
+            
+        });
+    });
+
+</script>
 <script src="js/app.min.js"></script>
 <script type="text/javascript" src="js/tinyfader.js"></script>
+
 <script type="text/javascript">
 var slideshow=new TINY.fader.fade('slideshow',{
     id:'slides',

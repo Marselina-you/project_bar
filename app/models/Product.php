@@ -31,6 +31,35 @@ class Product
 
         return $productsList;
     }
+
+
+    public static function getLatestExtras($count = self::SHOW_BY_DEFAULT)
+    {
+        $count = intval($count);
+        $db = Db::getConnection();
+        $extrasList = array();
+       
+        $result = $db->query('SELECT id, name, price, weight FROM productextras '
+                
+                . 'ORDER BY id DESC '                
+                . 'LIMIT ' . $count);
+
+        $i = 0;
+         
+        while ($row = $result->fetch()) {
+            $extrasList[$i]['id'] = $row['id'];
+            $extrasList[$i]['name'] = $row['name'];
+            $extrasList[$i]['price'] = $row['price'];
+            $extrasList[$i]['weight'] = $row['weight'];
+            
+            $i++;
+        }
+    
+
+        return $extrasList;
+    }
+
+
     public static function getProductsListByCategory($categoryId = false)
     {
         if ($categoryId) {
@@ -53,6 +82,31 @@ class Product
             }
 
             return $products;       
+        }
+    }
+
+    public static function getExtrasListByCategory($categoryExtrasId = false)
+    {
+        if ($categoryExtrasId) {
+
+            $db = Db::getConnection();            
+            $productsExtras = array();
+            $result = $db->query("SELECT id, name, price, weight   FROM productextras "
+                    . "WHERE  category_id = '$categoryExtrasId' "
+                    . "ORDER BY id DESC "                
+                    . "LIMIT ".self::SHOW_BY_DEFAULT);
+
+            $i = 0;
+            while ($row = $result->fetch()) {
+                $productsExtras[$i]['id'] = $row['id'];
+                $productsExtras[$i]['name'] = $row['name'];
+                $productsExtras[$i]['price'] = $row['price'];
+                $productsExtras[$i]['weight'] = $row['weight'];
+                
+                $i++;
+            }
+
+            return $productsExtras;       
         }
     }
     

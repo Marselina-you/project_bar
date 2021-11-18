@@ -26,4 +26,26 @@ class Category
         return $categoryList;
     }
 
+    public static function getExtrasList()
+    {
+
+        $db = Db::getConnection();
+
+        $extrasList = array();
+
+        $result = $db->query('SELECT id, name FROM categoryextras '
+                . 'ORDER BY sort_order ASC');
+
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $extrasList[$i]['id'] = $row['id'];
+            $extrasList[$i]['name'] = $row['name'];
+            $i++;
+        }
+
+        return $extrasList;
+    }
+
+
+
 }

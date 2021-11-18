@@ -9,8 +9,16 @@ class CatalogController
 		$categories = array();
         $categories = Category::getCategoriesList();
 
-         $latestProducts = array();
+
+
+        $latestProducts = array();
         $latestProducts = Product::getLatestProducts(12);
+
+        $extras = array();
+        $extras = Category::getExtrasList();
+
+        $latestExtras = array();
+        $latestExtras  = Product::getLatestExtras(6);
 
         require_once(ROOT . '/views/catalog/index.php');
 
@@ -21,12 +29,37 @@ class CatalogController
     {
         $categories = array();
         $categories = Category::getCategoriesList();
-        
-        $categoryProducts = array();
+
+		$categoryProducts = array();
         $categoryProducts = Product::getProductsListByCategory($categoryId);
+
+        $extras = array();
+        $extras = Category::getExtrasList();
+
+        $latestExtras = array();
+        $latestExtras  = Product::getLatestExtras(6);
        
         require_once(ROOT . '/views/catalog/category.php');
 
         return true;
     }
+
+    public function actionExtras($categoryExtrasId)
+    {
+        
+        $extras = array();
+        $extras = Category::getExtrasList();
+
+        $categoryExtras = array();
+        $categoryExtras = Product::getExtrasListByCategory($categoryExtrasId);
+
+        
+       
+        
+
+        return true;
+    }
+
+   
+    
 }
