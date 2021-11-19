@@ -35,7 +35,7 @@ include ROOT.'/views/layouts/header.php';?>
 
  foreach ($extras as $extrasItem): ?>
 
- <div id="cart-count"></div>
+ 
 
                            <div class="d-flex justify-content-center align-items-center">
                 <div class="menu-products__item justify-content-center"><a href="/extras/watchAjax/<?php echo $extrasItem['id'];?>" data-id="<?php echo $extrasItem['id'];?>" id = "extrasWatch" class=" size18px whitecolor fontSans">
@@ -43,7 +43,8 @@ include ROOT.'/views/layouts/header.php';?>
                                         </a></div>
                                    
                         <?php endforeach;?> 
-</div></div> <?php foreach ($latestExtras as $extras): ?>
+</div></div> 
+<div id="cart-count"><?php foreach ($latestExtras as $extras): ?>
 <div class="block-product-additionally-content d-flex flex-column justify-content-center">
 	<div class="count_box block-product-additionally__name whitecolor size22px fontSans text-center">
 		<a href=""><?php echo $extras['name'];?></a>
@@ -53,7 +54,7 @@ include ROOT.'/views/layouts/header.php';?>
 </div>
 
                                         
-                                        <?php endforeach;?> 
+                                        <?php endforeach;?></div> 
 <?php
 
  include ROOT.'/views/layouts/footer.php'; ?>

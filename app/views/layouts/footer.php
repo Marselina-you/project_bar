@@ -62,8 +62,10 @@
  $(document).ready(function() {
     $('a').click(function(evt) {
        evt.preventDefault();
-        var url = $(this).attr('href');
-            $('#cart-count').load(url);
+        var id = $(this).attr("data-id");
+            $.post("/extras/watchAjax/"+id, {}, function (data) {
+                $("#cart-count").html(data);
+            });
     });
  });
 </script>
