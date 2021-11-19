@@ -9,6 +9,10 @@
         <title>Главная</title>
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
  <link rel="stylesheet" href="/css/app.min.css">
+ <script src="/js/app.min.js"></script>
+<script type="text/javascript" src="js/tinyfader.js"></script>
+<script src="/js/jquery-3.0.0.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
         
     </head><!--/head-->
 
@@ -37,12 +41,27 @@
                         <div class="page-title-header-menu__item"><a href="/cart/" class="whitecolor  size18px fontSans">корзина</a></div>
                         <div class="page-title-header-menu__item"><a href="#top" class="whitecolor size18px fontSans">booking</a></div>
                         <div class="page-title-header-menu__item"><a href="" class="whitecolor size18px fontSans">delivery</a></div>
+                        <div class="page-title-header-menu__item"><a href="/user/enteregister/" class="whitecolor size18px fontSans header-box1__href">register</a></div>
 
                     </div>
                 </div>
 
-           
+      
 
             
             
         </header><!--/header-->
+        <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content backgroud2">
+           
+                
+                <div class="backgroud2 d-flex justify-content-end close2"  data-dismiss="modal"><img src="/images/dest/g8lack.png"  alt=""/></div>                
+            
+            <div class="modal-body">
+                
+            </div>
+            
+        </div>
+    </div>
+</div>    

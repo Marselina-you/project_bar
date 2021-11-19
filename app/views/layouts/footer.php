@@ -52,11 +52,11 @@
  
 
 
-</script>
+
 <script src="/js/app.min.js"></script>
 <script type="text/javascript" src="js/tinyfader.js"></script>
 <script src="/js/jquery-3.0.0.min.js"></script>
-
+<script src="/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
  $(document).ready(function() {
@@ -66,6 +66,16 @@
             $.post("/extras/watchAjax/"+id, {}, function (data) {
                 $("#cart-count").html(data);
             });
+    });
+
+
+    $('.header-box1__href').click(function(evt){
+        evt.preventDefault();
+        $("#myModal").modal("show");
+        var url = $(this).attr('href');
+        $('.modal-body').load(url + ' .block-registration-enter');
+        return false;
+
     });
  });
 </script>
@@ -79,7 +89,7 @@ var slideshow=new TINY.fader.fade('slideshow',{
     activeclass:'current',
     visible:true,
     position:0
-});
+});</script>
 
 </body>
 </html>

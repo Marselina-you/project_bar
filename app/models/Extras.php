@@ -1,15 +1,15 @@
 <?php 
 class Extras
 {
-	public static function getExtrasByCategory($categoryId)
+	public static function getExtrasByCategory($extrasId)
     {
        
-         if ($categoryId) {
+         if ($extrasId) {
 
             $db = Db::getConnection();            
             $products = array();
-            $result = $db->query("SELECT id, name, price, weight   FROM productextras "
-                    . "WHERE category_id = '$categoryId' "
+            $result = $db->query("SELECT id, name, price, weight, description, land   FROM productextras "
+                    . "WHERE category_id = '$extrasId' "
                     . "ORDER BY id DESC ");
 
             $i = 0;
@@ -18,6 +18,8 @@ class Extras
                 $products[$i]['name'] = $row['name'];
                 $products[$i]['price'] = $row['price'];
                 $products[$i]['weight'] = $row['weight'];
+                $products[$i]['description'] = $row['description'];
+                $products[$i]['land'] = $row['land'];
                 
                 $i++;
             }

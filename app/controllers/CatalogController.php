@@ -1,6 +1,5 @@
 <?php  
-include_once ROOT . '/models/Category.php';
-include_once ROOT . '/models/Product.php';
+
 
 class CatalogController
 {
@@ -10,7 +9,7 @@ class CatalogController
         $categories = Category::getCategoriesList();
 
         $latestProducts = array();
-        $latestProducts = Product::getLatestProducts(12);
+        $latestProducts = Product::getLatestProducts(3);
 
         $extras = array();
         $extras = Category::getExtrasList();
