@@ -60,7 +60,7 @@
 
 <script type="text/javascript">
  $(document).ready(function() {
-    $('a').click(function(evt) {
+    $('.extrasWatch').click(function(evt) {
        evt.preventDefault();
         var id = $(this).attr("data-id");
             $.post("/extras/watchAjax/"+id, {}, function (data) {

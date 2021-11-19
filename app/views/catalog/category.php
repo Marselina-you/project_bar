@@ -35,20 +35,22 @@ include ROOT.'/views/layouts/header.php';?>
 
  foreach ($extras as $extrasItem): ?>
                            <div class="d-flex justify-content-center align-items-center">
-                <div class="menu-products__item justify-content-center"><a href="/extras/<?php echo $extrasItem['id'];?>" class="size18px whitecolor fontSans">
+                <div class="menu-products__item justify-content-center"><a href="/extras/watchAjax/<?php echo $extrasItem['id'];?>" data-id="<?php echo $extrasItem['id'];?>"  class="extrasWatch size18px whitecolor fontSans">
                                         <?php echo $extrasItem['name'];?>
                                         </a></div>
                                    
                         <?php endforeach;?> 
-</div></div> <?php foreach ($categoryExtras as $extrasItem): ?>
+</div></div> <div id="cart-count"><?php foreach ($latestExtras as $extrasProduct): ?>
 <div class="block-product-additionally-content d-flex flex-column justify-content-center">
 	<div class="count_box block-product-additionally__name whitecolor size22px fontSans text-center">
-		<a href=""><?php echo $extrasItem['name'];?></a>
+		<a href=""><?php echo $extrasProduct['name'];?></a>
 	</div>';
-   <div class="block-product-additionally__value whitecolor size18px fontSans text-center"><?php echo $extrasItem['price'];?>&nbsp;&#8364;
+   <div class="block-product-additionally__value whitecolor size18px fontSans text-center"><?php echo $extrasProduct['price'];?>&nbsp;&#8364;
    </div>
 </div>
+
                                         
-                                        <?php endforeach;
+                                        <?php endforeach;?></div> 
+ <?php
 
  include ROOT.'/views/layouts/footer.php'; ?>
