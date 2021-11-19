@@ -48,24 +48,27 @@
     
 </footer><!--/Footer-->
 </div>
-<script type="text/javascript">
-  
-    $(document).ready(function(){
-        $(".clickExtras").click(function(evt) {
-            evt.preventDefault();
-            var id = $(this).attr("data-id");
-            $.get("/catalog/extras/"+id, {}, function (data) {
-                $(".nown").html(data);
-            });
-            
-        });
-    });
+
+ 
+
 
 </script>
-<script src="js/app.min.js"></script>
+<script src="/js/app.min.js"></script>
 <script type="text/javascript" src="js/tinyfader.js"></script>
+<script src="/js/jquery-3.0.0.min.js"></script>
+
 
 <script type="text/javascript">
+ $(document).ready(function() {
+    $('a').click(function(evt) {
+       evt.preventDefault();
+        var url = $(this).attr('href');
+            $('#cart-count').load(url);
+    });
+ });
+</script>
+
+<script type="text/javascript">    
 var slideshow=new TINY.fader.fade('slideshow',{
     id:'slides',
     auto:10,
@@ -75,7 +78,6 @@ var slideshow=new TINY.fader.fade('slideshow',{
     visible:true,
     position:0
 });
-</script>
 
 </body>
 </html>

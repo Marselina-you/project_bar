@@ -85,30 +85,7 @@ class Product
         }
     }
 
-    public static function getExtrasListByCategory($categoryExtrasId = false)
-    {
-        if ($categoryExtrasId) {
-
-            $db = Db::getConnection();            
-            $productsExtras = array();
-            $result = $db->query("SELECT id, name, price, weight   FROM productextras "
-                    . "WHERE  category_id = '$categoryExtrasId' "
-                    . "ORDER BY id DESC "                
-                    . "LIMIT ".self::SHOW_BY_DEFAULT);
-
-            $i = 0;
-            while ($row = $result->fetch()) {
-                $productsExtras[$i]['id'] = $row['id'];
-                $productsExtras[$i]['name'] = $row['name'];
-                $productsExtras[$i]['price'] = $row['price'];
-                $productsExtras[$i]['weight'] = $row['weight'];
-                
-                $i++;
-            }
-
-            return $productsExtras;       
-        }
-    }
+    
     
     public static function getProductById($id)
     {

@@ -40,12 +40,12 @@ include ROOT.'/views/layouts/header.php';?>
                                         </a></div>
                                    
                         <?php endforeach;?> 
-</div></div> <?php foreach ($latestExtras as $extras): ?>
+</div></div> <?php foreach ($categoryExtras as $extrasItem): ?>
 <div class="block-product-additionally-content d-flex flex-column justify-content-center">
 	<div class="count_box block-product-additionally__name whitecolor size22px fontSans text-center">
-		<a href=""><?php echo $extras['name'];?></a>
+		<a href=""><?php echo $extrasItem['name'];?></a>
 	</div>';
-   <div class="block-product-additionally__value whitecolor size18px fontSans text-center"><?php echo $extras['price'];?>&nbsp;&#8364;
+   <div class="block-product-additionally__value whitecolor size18px fontSans text-center"><?php echo $extrasItem['price'];?>&nbsp;&#8364;
    </div>
 </div>
                                         
