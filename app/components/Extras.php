@@ -7,24 +7,24 @@ class Extras
          if ($extrasId) {
 
             $db = Db::getConnection();            
-            $products = array();
+            $productExtras = array();
             $result = $db->query("SELECT id, name, price, weight, description, land   FROM productextras "
                     . "WHERE category_id = '$extrasId' "
                     . "ORDER BY id DESC ");
 
             $i = 0;
             while ($row = $result->fetch()) {
-                $products[$i]['id'] = $row['id'];
-                $products[$i]['name'] = $row['name'];
-                $products[$i]['price'] = $row['price'];
-                $products[$i]['weight'] = $row['weight'];
-                $products[$i]['description'] = $row['description'];
-                $products[$i]['land'] = $row['land'];
+                $productExtras[$i]['id'] = $row['id'];
+                $productExtras[$i]['name'] = $row['name'];
+                $productExtras[$i]['price'] = $row['price'];
+                $productExtras[$i]['weight'] = $row['weight'];
+                $productExtras[$i]['description'] = $row['description'];
+                $productExtras[$i]['land'] = $row['land'];
                 
                 $i++;
             }
 
-            return $products;       
+            return $productExtras;       
         }
     }
 }

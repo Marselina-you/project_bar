@@ -38,7 +38,7 @@ include ROOT.'/views/layouts/header.php';?>
  
 
                            <div class="d-flex justify-content-center align-items-center">
-                <div class="menu-products__item justify-content-center"><a href="/extras/watchAjax/<?php echo $extrasItem['id'];?>" data-id="<?php echo $extrasItem['id'];?>"  class="extrasWatch size18px whitecolor fontSans <?php if ($extrasId == $extrasItem['id']) echo 'active';?>">
+                <div class="menu-products__item justify-content-center"><a href="/extras/watchAjax/<?php echo $extrasItem['id'];?>" data-id="<?php echo $extrasItem['id'];?>"  class="extrasWatch size18px whitecolor fontSans">
                                         <?php echo $extrasItem['name'];?>
                                         </a></div>
                                    
