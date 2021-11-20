@@ -54,12 +54,12 @@ class User
     }
       public static function auth($userId)
 {
-        session_start();
+        
         $_SESSION['user'] = $userId;
     }
     public static function checkLogged()
     {
-        session_start();
+        
         // Если сессия есть, вернем идентификатор пользователя
         if (isset($_SESSION['user'])) {
             return $_SESSION['user'];
@@ -70,8 +70,10 @@ class User
 
     public static function isGuest()
     {
+        
         if (isset($_SESSION['user'])) {
             return false;
+            
         }
         return true;
     }

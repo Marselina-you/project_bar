@@ -39,10 +39,20 @@
                         <div class="page-title-header-menu__item"><a href="podmenu.php" class="whitecolor  size18px fontSans">about us</a></div>
                         <div class="page-title-header-menu__item"><a href="/catalog/" class="whitecolor  size18px fontSans">menu</a></div>
                         <div class="page-title-header-menu__item"><a href="/cart/" class="whitecolor  size18px fontSans">корзина</a></div>
-                        <div class="page-title-header-menu__item"><a href="#top" class="whitecolor size18px fontSans">booking</a></div>
+                        <div class="page-title-header-menu__item"><a href="/layouts/header/" class="whitecolor size18px fontSans">booking</a></div>
                         <div class="page-title-header-menu__item"><a href="" class="whitecolor size18px fontSans">delivery</a></div>
- <div class="page-title-header-menu__item"><a href="/user/login/" class="whitecolor size18px fontSans header-box1__href">account</a></div>
-                        <div class="page-title-header-menu__item"><a href="/user/logout/" class="whitecolor size18px fontSans ">out</a></div>
+ 
+                        <?php if (User::isGuest()): ?>   
+
+                        <div class="page-title-header-menu__item"><a href="/user/login/" class="whitecolor size18px fontSans header-box1__href">Вход</a></div>
+
+                         <?php else: ?>
+
+                             <div class="page-title-header-menu__item"><a href="/cabinet/" class="whitecolor size18px fontSans ">account</a></div>
+
+                                                                            
+                                       <div class="page-title-header-menu__item"><a href="/user/logout/" class="whitecolor size18px fontSans"> Выход</a></div>                                        
+                                    <?php endif; ?>
 
                     </div>
                 </div>
@@ -64,5 +74,5 @@
             </div>
             
         </div>
-    </div>
-</div>  
+    </div></div>
+

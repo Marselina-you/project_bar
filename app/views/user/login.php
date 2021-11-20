@@ -1,3 +1,4 @@
+ 
 <div class="container-fluid block-registration-enter col-lg-12 d-flex flex-column">
 
      <div class="col-sm-4 col-sm-offset-4 padding-right">

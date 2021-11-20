@@ -2,14 +2,14 @@
 
 <section>
     <div class="container">
-        <div class="row">
+        <div class="flex">
 
-            <h1>Кабинет пользователя</h1>
+            <h1 class="whitecolor fontSans">Кабинет пользователя</h1>
             
-            <h3>Привет, <?php echo $user['name'];?>!</h3>
+            <div class="whitecolor size18px fontSans">Привет, <?php echo $user['name'];?>!</div>
             <ul>
-                <li><a href="/cabinet/edit">Редактировать данные</a></li>
-                <li><a href="/cabinet/history">Список покупок</a></li>
+                <li class="whitecolor size18px fontSans"><a href="/cabinet/edit">Редактировать данные</a></li>
+                <li class="whitecolor size18px fontSans"><a href="/cabinet/history">Список покупок</a></li>
             </ul>
             
         </div>
