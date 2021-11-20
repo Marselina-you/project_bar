@@ -69,13 +69,33 @@
     });
 
 
+ /*$('.header-box1__href').click(function(evt){
+
+    evt.preventDefault();
+   $.post("/user/login/", {}, function (data) {
+                $(".signup-form").html(data);
+            });
+
+   
+    var url = $(this).attr('data-id');
+    $.post("/user/login/", {}, function (data) {
+                $(".modal-body").html(data);
+            });
+                
+            
+
+        
+     });*/
+
+
+
      $('.header-box1__href').click(function(evt){
         evt.preventDefault();
         $("#myModal").modal("show");
-       
         return false;
 
     });
+
  });
 </script>
 

@@ -79,7 +79,7 @@ class UserController
 
         }
 
-        require_once(ROOT . '/views/user/login.php');
+       require_once(ROOT . '/views/user/login.php');//вернули на стр входа юзера, кот-й не помнит пароль
 
         return true;
     }
