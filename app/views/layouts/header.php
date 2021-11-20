@@ -41,7 +41,8 @@
                         <div class="page-title-header-menu__item"><a href="/cart/" class="whitecolor  size18px fontSans">корзина</a></div>
                         <div class="page-title-header-menu__item"><a href="#top" class="whitecolor size18px fontSans">booking</a></div>
                         <div class="page-title-header-menu__item"><a href="" class="whitecolor size18px fontSans">delivery</a></div>
-                        <div class="page-title-header-menu__item"><a href="/user/enteregister/" class="whitecolor size18px fontSans header-box1__href">register</a></div>
+ <div class="page-title-header-menu__item"><a href="/user/login/" class="whitecolor size18px fontSans header-box1__href">account</a></div>
+                        <div class="page-title-header-menu__item"><a href="/user/logout/" class="whitecolor size18px fontSans ">out</a></div>
 
                     </div>
                 </div>
@@ -64,4 +65,4 @@
             
         </div>
     </div>
-</div>    
+</div>  

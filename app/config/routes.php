@@ -8,7 +8,10 @@ return array(
    'extras/watchAjax/([0-9]+)' => 'extras/watchAjax/$1',
 
    'user/register' => 'user/register',
-   'user/enteregister' => 'user/enteregister',
+   'user/login' => 'user/login',
+   'user/logout' => 'user/logout',
+
+   'cabinet' => 'cabinet/index',
     
    
    '' => 'site/index', // actionIndex в SiteController
