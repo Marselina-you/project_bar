@@ -62,21 +62,15 @@
  $(document).ready(function() {
     $('.extrasWatch').click(function(evt) {
        evt.preventDefault();
-        var id = $(this).attr("data-id");
+        var id = $(this).attr("href");
             $.post("/extras/watchAjax/"+id, {}, function (data) {
                 $("#cart-count").html(data);
             });
     });
 
 
- /*$('.header-box1__href').click(function(evt){
-
+  /*$('.header-box1__href').click(function(evt){
     evt.preventDefault();
-   $.post("/user/login/", {}, function (data) {
-                $(".signup-form").html(data);
-            });
-
-   
     var url = $(this).attr('data-id');
     $.post("/user/login/", {}, function (data) {
                 $(".modal-body").html(data);
@@ -87,15 +81,61 @@
         
      });*/
 
+/*function jsfunction(){
+     
+    prompt('Пожалуйста, представьтесь?');
+};
 
-
-     $('.header-box1__href').click(function(evt){
+    $('.header-box1__href').click(function(evt){
         evt.preventDefault();
         $("#myModal").modal("show");
         return false;
 
     });
 
+    $( document ).ready(function() {
+    $("#btn").click(
+        function(){
+            var id = $(this).attr("data-id");
+             $.post("/site/loginAjax", {}, function (data) {
+                $("#result_form").html(data);
+            });
+        }
+    );
+
+    function sendAjaxForm(result_form, ajax_form, url) {
+    $.ajax({
+        url:     'SiteController.php', //url страницы (action_ajax_form.php)
+        type:     "POST", //метод отправки
+        dataType: "html", //формат данных
+        data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
+        success: function(response) { //Данные отправлены успешно
+            result = $.parseJSON(response);
+            $('#result_form').html();
+        },
+        error: function(response) { // Данные не отправлены
+            $('#result_form').html('Ошибка. Данные не отправлены.');
+        }
+    });
+}
+});*/
+
+$('#my_form').submit(function(){
+    
+   
+    $.post(
+        '/login', // адрес обработчика
+         $("#my_form").serialize(), // отправляемые данные          
+        
+        function(msg) { // получен ответ сервера  
+            
+            $('#my_form').html(msg);
+        }
+    );
+    return false;
+    
+    
+});
  });
 </script>
 

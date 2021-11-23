@@ -1,22 +1,26 @@
-<?php
-
+<?php 
 class User
 {
-    public static function register($name, $email, $password) {
-        
+	public static function register($name, $email, $password, $phone)
+    {
+
         $db = Db::getConnection();
-        
-        $sql = 'INSERT INTO user (name, email, password) '
-                . 'VALUES (:name, :email, :password)';
-        
+
+        $sql = 'INSERT INTO user (name, email, password, phone) '
+                . 'VALUES (:name, :email, :password, :phone)';
+
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
+        $result->bindParam(':phone', $phone, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
-        
+
         return $result->execute();
     }
-     public static function edit($id, $name, $password)
+
+
+     
+    public static function edit($id, $name, $password)
     {
         $db = Db::getConnection();
         
@@ -30,7 +34,7 @@ class User
         $result->bindParam(':password', $password, PDO::PARAM_STR); 
         return $result->execute();
     }
-    public static function checkUserData($email, $password)
+     public static function checkUserData($email, $password)
     {
         $db = Db::getConnection();
 
@@ -48,31 +52,33 @@ class User
 
         return false;
     }
-    public static function auth($userId)
-    {   
+      public static function auth($userId)
+{
         
         $_SESSION['user'] = $userId;
     }
     public static function checkLogged()
     {
         
+        // Если сессия есть, вернем идентификатор пользователя
         if (isset($_SESSION['user'])) {
             return $_SESSION['user'];
         }
-        header("Location: /user/login");
 
+        header("Location: /user/login");
     }
-     public static function isGuest()
-    {   
+
+    public static function isGuest()
+    {
+        
         if (isset($_SESSION['user'])) {
             return false;
+            
         }
         return true;
     }
-    
-    /**
-     * Проверяет имя: не меньше, чем 2 символа
-     */
+
+
     public static function checkName($name) {
         if (strlen($name) >= 2) {
             return true;
@@ -99,7 +105,7 @@ class User
         }
         return false;
     }
-    
+
     public static function checkEmailExists($email) {
         
         $db = Db::getConnection();
@@ -114,7 +120,9 @@ class User
             return true;
         return false;
     }
-    public static function getUserById($id)
+
+
+ public static function getUserById($id)
     {
         if ($id) {
             $db = Db::getConnection();
@@ -131,5 +139,7 @@ class User
             return $result->fetch();
         }
     }
+
     
+   
 }
