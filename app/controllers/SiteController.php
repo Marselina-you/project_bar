@@ -15,42 +15,28 @@ class SiteController
 
 
 	 public function actionLogin()
-    {
-    	$email = '';
-        $password = '';
+    {       $email = $_POST['email'];
+            $password = $_POST['password'];
 
-  
-      
-$email = $_POST['email'];
-$password = $_POST['password'];
+$okey =3;
 
-if (!User::checkEmail($email)) {
-                $errors[] = 'Неправильный email';
-            }
-if (!User::checkPassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 6-ти символов';
-            }
-            
-            // Проверяем существует ли пользователь
-            $userId = User::checkUserData($email, $password);  
+    	if (isset($email)){
+        
+            echo $password;
+            echo $email;
 
-            if ($userId == false) {
-                // Если данные неправильные - показываем ошибку
-                $errors[] = 'Неправильные данные для входа на сайт';
-            } else {
-                // Если данные правильные, запоминаем пользователя (сессия)
-                User::auth($userId);
-                
-                // Перенаправляем пользователя в закрытую часть - кабинет 
-                header("Location: /cabinet/"); 
-            }
+            return $okey;
+        }
+
 
         
 
-require_once(ROOT . '/views/site/login.php');
-     
-
-        return true;
+   
+ return true;
+    }
+        
+        
+        //когда это убираешь, роутер не может ничего найти
     }
 
     
@@ -63,4 +49,3 @@ require_once(ROOT . '/views/site/login.php');
 
 	
 
-}

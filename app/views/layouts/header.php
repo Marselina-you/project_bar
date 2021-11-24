@@ -41,18 +41,18 @@
                         <div class="page-title-header-menu__item"><a href="/cart/" class="whitecolor  size18px fontSans">корзина</a></div>
                         <div class="page-title-header-menu__item"><a href="/layouts/header/" class="whitecolor size18px fontSans">booking</a></div>
                         <div class="page-title-header-menu__item"><a href="" class="whitecolor size18px fontSans">delivery</a></div>
- <?php if (User::isGuest()): ?>
-     <div class="page-title-header-menu__item"><a href="/user/logout/" class="whitecolor size18px fontSans">Вход</a></div><?php else: ?>
-                       
 
-                             <div class="page-title-header-menu__item"><a href="/cabinet/" class="whitecolor size18px fontSans ">account</a></div>
-
-                                                                            
-                                       <div class="page-title-header-menu__item"><a href="/user/logout/" class="whitecolor size18px fontSans"> Выход</a></div>   <?php endif; ?>                                      
+                                    <a href="" class="header-box1__href">Вход</a>
+                                   
+                                    <a href="/cabinet/"><i class="fa fa-user"> Аккаунт</a>
+                                     <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
+                                     
+                                
+                            </div>                               
                                   
 
                     </div>
-                </div>
+               
 
       
 
@@ -60,7 +60,20 @@
             
         </header>
 
-
+<div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content backgroud2">
+           
+                
+                <div class="backgroud2 d-flex justify-content-end close2"  data-dismiss="modal"><img src="/images/dest/g8lack.png"  alt=""/></div>                
+            
+            <div class="modal-body">
+                <?php include ROOT.'/views/user/login.php'; ?>
+            </div>
+        </div>
+    </div>
+</div>
+            
 
        <!-- <div id="myModal" class="modal fade" tabindex="-1">
     <div class="modal-dialog">

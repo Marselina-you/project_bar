@@ -81,10 +81,7 @@
         
      });*/
 
-/*function jsfunction(){
-     
-    prompt('Пожалуйста, представьтесь?');
-};
+
 
     $('.header-box1__href').click(function(evt){
         evt.preventDefault();
@@ -93,7 +90,7 @@
 
     });
 
-    $( document ).ready(function() {
+    /* $( document ).ready(function() {
     $("#btn").click(
         function(){
             var id = $(this).attr("data-id");
@@ -127,9 +124,11 @@ $('#my_form').submit(function(){
         '/login', // адрес обработчика
          $("#my_form").serialize(), // отправляемые данные          
         
-        function(msg) { // получен ответ сервера  
+        function(msg)  {
+        if (msg == 3){// получен ответ сервера  
             
-            $('#my_form').html(msg);
+            
+            $('#my_message').html(msg);}
         }
     );
     return false;

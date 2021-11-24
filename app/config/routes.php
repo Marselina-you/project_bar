@@ -11,7 +11,8 @@ return array(
   
   
    'header' => 'layouts/header',
-   'login' => 'login/index',
+   
+
 
    'cabinet/edit' => 'cabinet/edit',
    'cabinet' => 'cabinet/index',
