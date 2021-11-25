@@ -15,29 +15,36 @@ class SiteController
 
 
 	 public function actionLogin()
-    {       $email = $_POST['email'];
-            $password = $_POST['password'];
-
-$okey =3;
-
-    	if (isset($email)){
+    {  
+    	
+    	$email = $_POST['email'];
+        $password = $_POST['password'];
         
-            echo $password;
-            echo $email;
-
-            return $okey;
-        }
-
-
+        $errors = false;
         
 
-   
- return true;
+    	
+
+    		if (!User::checkEmail($email)) {
+                $errors = true;
+
+                
+       
+            }  
+            	
+            
+       
+
+    	
+return true;
+
+    
+
     }
+
         
         
-        //когда это убираешь, роутер не может ничего найти
-    }
+}
 
     
  

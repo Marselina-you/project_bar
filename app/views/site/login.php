@@ -1,6 +1,6 @@
  <div id="my_message"></div>
 
-                <form id="my_for" action="/login" method="post">
+                <form id="my_form" action="/login" method="post">
     <div class="mar10-tb"><label>Адрес почты: <input name="email"></label></div>
     <div class="mar10-tb"><label>Пароль: <input name="password"></label></div>
     

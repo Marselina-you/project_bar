@@ -1,11 +1,14 @@
  <div id="my_message"></div>
 
                 <form id="my_form">
+                    
+                    </ul><?php echo $errors;?>
+                
     <div class="mar10-tb"><label>Адрес почты: <input name="email"></label></div>
     <div class="mar10-tb"><label>Пароль: <input name="password"></label></div>
     
 
  
-<div><button type="submit" id="my_form_send">Отправить</button></div>
+<div><input type="submit" name="submit"></button></div>
 
 </form> 
