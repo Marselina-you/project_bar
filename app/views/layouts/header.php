@@ -45,6 +45,7 @@
                                     <a href="" class="header-box1__href">Вход</a>
                                    
                                     <a href="/cabinet/"><i class="fa fa-user"> Аккаунт</a>
+                                        
                                      <a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a>
                                      
                                 

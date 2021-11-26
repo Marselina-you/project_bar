@@ -1,6 +1,6 @@
- <div id="my_message"></div>
+<div id="my_message"></div> 
 
-                <form id="my_form">
+                <form id="my_form" method="post">
                     
                     </ul><?php echo $errors;?>
                 

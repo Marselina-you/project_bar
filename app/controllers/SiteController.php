@@ -16,35 +16,31 @@ class SiteController
 
 	 public function actionLogin()
     {  
-    	
-    	$email = $_POST['email'];
-        $password = $_POST['password'];
-        
-        $errors = false;
-        
 
-    	
+         $email = isset($_POST['email']);
+            $password = isset($_POST['password']);
 
-    		if (!User::checkEmail($email)) {
-                $errors = true;
+            if ($mail == '11'){
 
-                
-       
-            }  
-            	
+$okey = 'pass';
+echo $okey;}
+               else {
+                echo 'now';
+               }
+                       
             
-       
-
-    	
-return true;
-
-    
-
-    }
+            
 
         
+
+       
+
+        return true; 
+
+ }       
         
 }
+
 
     
  

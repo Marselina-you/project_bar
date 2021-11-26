@@ -124,16 +124,19 @@ $('#my_form').submit(function(){
         '/login', // адрес обработчика
          $("#my_form").serialize(), // отправляемые данные          
         
-        function(errors)  {
-        if (errors == true){// получен ответ сервера  
+        function(msg)  {
+        // получен ответ сервера  
             
-            
-            $('#my_message').html(errors);}
+        if (msg == 'pass'){  
+            $('#my_message').html(msg);}
             else {
-                 window.location.href = "/login";
-            }
-           
+                window.location.href = "/login";
         }
+        }
+        
+            
+           
+        
     );
     return false;
     
