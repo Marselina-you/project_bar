@@ -76,14 +76,7 @@
 </div>
             
 
-        <div id="myModal" class="modal fade" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content backgroud2">
-           
-                
-                <div class="backgroud2 d-flex justify-content-end close2"  data-dismiss="modal"><img src="/images/dest/g8lack.png"  alt=""/></div>                
-            
-            <div class="modal-body">
+      
 
 
 
@@ -122,6 +115,6 @@
             </div>
             
         </div>
-    </div></div>-->
+    
         
 

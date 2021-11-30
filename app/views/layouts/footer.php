@@ -115,7 +115,7 @@
         }
     });
 }
-});*/
+});
 
 $('#my_form').submit(function(){
     
@@ -124,16 +124,7 @@ $('#my_form').submit(function(){
         '/login', // адрес обработчика
          $("#my_form").serialize(), // отправляемые данные          
         
-        function(msg)  {
-        // получен ответ сервера  
-            
-        if (msg == 'pass'){  
-            $('#my_message').html(msg);}
-            else {
-                window.location.href = "/login";
-        }
-        }
-        
+       
             
            
         
@@ -141,7 +132,7 @@ $('#my_form').submit(function(){
     return false;
     
     
-});
+});*/
  });
 </script>
 
