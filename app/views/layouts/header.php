@@ -42,7 +42,7 @@
                         <div class="page-title-header-menu__item"><a href="/layouts/header/" class="whitecolor size18px fontSans">booking</a></div>
                         <div class="page-title-header-menu__item"><a href="" class="whitecolor size18px fontSans">delivery</a></div>
 
-                                    <a href="" class="header-box1__href">Вход</a>
+                                    <a href="" class="header-box1__href">dход</a>
                                    
                                     <a href="/cabinet/"><i class="fa fa-user"> Аккаунт</a>
                                         
