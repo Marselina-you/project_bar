@@ -23,7 +23,7 @@
 
             <div class="page-title-header-left col-xl-3 col-lg-3 col-md-3 col-sm-3">
                 <div class="page-title-header-left__block d-flex flex-column align-items-center">
-                    <div class="page-title-header-left__name fontSans font-weight-bold whitecolor">BURRIT</div>
+                    <div class="page-title-header-left__name fontSans font-weight-bold whitecolor">BURRI</div>
                     <div class="page-title-header-left__decoration  justify-content-center"><img src="/images/dest/miny-decor.png" alt="Мустанг" /></div>
                     <div class="page-title-header-left__subname whitecolor size24px">chili-bar</div>
 

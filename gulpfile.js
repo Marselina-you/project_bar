@@ -29,6 +29,7 @@ const del = require('del');
 function browsersync() {
 	browserSync.init({ // Инициализация Browsersync
 		proxy: "bar",
+		
 		notify: false, // Отключаем уведомления
 		online: true // Режим работы: true или false
 	})
